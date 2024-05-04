@@ -1,6 +1,9 @@
 package model;
 
-public class User {
+import java.io.Serializable;
+import java.util.Objects;
+
+public class User implements Serializable {
     private String user_name;
     private String user_password;
     private String user_address;
@@ -77,5 +80,24 @@ public class User {
     @Override
     public String toString() {
         return "User{" + "user_fullname=" + user_fullname + ", user_address=" + user_address + ", user_phone=" + user_phone + '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        try {
+            final User other = (User) obj;
+            return Objects.equals(this.user_phone, other.user_phone);
+        } catch (ClassCastException e) {
+            throw new ClassCastException("Đối tượng người dùng không hợp lệ");
+        }
     }
 }
