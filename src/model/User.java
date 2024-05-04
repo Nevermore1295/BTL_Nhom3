@@ -68,7 +68,7 @@ public class User {
     }
 
     public void setSdt(String sdt) throws Exception {
-        if(sdt.length() != 10) {
+        if(sdt.length() < 10) {
             throw new Exception("SDT khong hop le");
         }
         this.sdt = sdt;
