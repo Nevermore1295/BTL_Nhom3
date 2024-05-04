@@ -9,5 +9,5 @@ public class Bill {
     private User bill_owner;
     private Vehicle bill_vehicle;
     private Service bill_service;
-    private Date bill_date;
+    private Date bill_date_created;
 }
