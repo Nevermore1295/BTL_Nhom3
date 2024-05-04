@@ -10,28 +10,28 @@ public class User {
     public User() {
     }
 
-    public User(String hoTen, String diaChi, String sdt) {
+    public User(String user_fullname, String user_address, String user_phone) {
         try {
-            setHoTen(hoTen);
-            setDiaChi(diaChi);
-            setSdt(sdt);
+            setHoTen(user_fullname);
+            setDiaChi(user_address);
+            setSdt(user_phone);
         } catch(Exception e) {
             System.out.println("Co loi du lieu User khong hop le " + e.toString());
         }
     }
 
-    public User(String hoTen, String sdt) {
+    public User(String user_fullname, String user_phone) {
         try {
-            setHoTen(hoTen);
-            setSdt(sdt);
+            setHoTen(user_fullname);
+            setSdt(user_phone);
         } catch(Exception e) {
             System.out.println("Co loi du lieu User khong hop le " + e.toString());
         }
     }
 
-    public User(String hoTen) {
+    public User(String user_fullname) {
         try{
-            setHoTen(hoTen);
+            setHoTen(user_fullname);
         }
         catch(Exception e) {
             System.out.println("Co loi du lieu User khong hop le " + e.toString());
@@ -40,42 +40,42 @@ public class User {
     }
 
     public String getHoTen() {
-        return hoTen;
+        return user_fullname;
     }
 
-    public void setHoTen(String hoTen) throws Exception {
-        if(hoTen.trim().equals("")) {
+    public void setHoTen(String user_fullname) throws Exception {
+        if(user_fullname.trim().equals("")) {
             throw new Exception("Tên không được để trống");
-        } else if(hoTen.matches("[^a-zA-Z]+")) {
+        } else if(user_fullname.matches("[^a-zA-Z]+")) {
             throw new Exception("Tên không được có kí tự số");
         }
-        this.hoTen = hoTen;
+        this.user_fullname = user_fullname;
     }
 
     public String getDiaChi() {
-        return diaChi;
+        return user_address;
     }
 
-    public void setDiaChi(String diaChi) throws Exception {
-        if(diaChi.trim().equals("")) {
+    public void setDiaChi(String user_address) throws Exception {
+        if(user_address.trim().equals("")) {
             throw new Exception("Địa chỉ không được để trống");
         }
-        this.diaChi = diaChi;
+        this.user_address = user_address;
     }
 
     public String getSdt() {
-        return sdt;
+        return user_phone;
     }
 
-    public void setSdt(String sdt) throws Exception {
-        if(sdt.length() < 10) {
+    public void setSdt(String user_phone) throws Exception {
+        if(user_phone.length() < 10) {
             throw new Exception("SDT khong hop le");
         }
-        this.sdt = sdt;
+        this.user_phone = user_phone;
     }
 
     @Override
     public String toString() {
-        return "User{" + "hoTen=" + hoTen + ", diaChi=" + diaChi + ", sdt=" + sdt + '}';
+        return "User{" + "user_fullname=" + user_fullname + ", user_address=" + user_address + ", user_phone=" + user_phone + '}';
     }
 }
