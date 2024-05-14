@@ -15,9 +15,9 @@ public class User implements Serializable {
 
     public User(String user_fullname, String user_address, String user_phone) {
         try {
-            setHoTen(user_fullname);
-            setDiaChi(user_address);
-            setSdt(user_phone);
+            setUser_fullname(user_fullname);
+            setUser_address(user_address);
+            setUser_phone(user_phone);
         } catch(Exception e) {
             System.out.println("Co loi du lieu User khong hop le " + e.toString());
         }
@@ -25,8 +25,8 @@ public class User implements Serializable {
 
     public User(String user_fullname, String user_phone) {
         try {
-            setHoTen(user_fullname);
-            setSdt(user_phone);
+            setUser_fullname(user_fullname);
+            setUser_phone(user_phone);
         } catch(Exception e) {
             System.out.println("Co loi du lieu User khong hop le " + e.toString());
         }
@@ -34,7 +34,7 @@ public class User implements Serializable {
 
     public User(String user_fullname) {
         try{
-            setHoTen(user_fullname);
+            setUser_fullname(user_fullname);
         }
         catch(Exception e) {
             System.out.println("Co loi du lieu User khong hop le " + e.toString());
@@ -42,11 +42,11 @@ public class User implements Serializable {
 
     }
 
-    public String getHoTen() {
+    public String getUser_fullname() {
         return user_fullname;
     }
 
-    public void setHoTen(String user_fullname) throws Exception {
+    public void setUser_fullname(String user_fullname) throws Exception {
         if(user_fullname.trim().equals("")) {
             throw new Exception("Tên không được để trống");
         } else if(user_fullname.matches("[^a-zA-Z]+")) {
@@ -55,22 +55,22 @@ public class User implements Serializable {
         this.user_fullname = user_fullname;
     }
 
-    public String getDiaChi() {
+    public String getUser_address() {
         return user_address;
     }
 
-    public void setDiaChi(String user_address) throws Exception {
+    public void setUser_address(String user_address) throws Exception {
         if(user_address.trim().equals("")) {
             throw new Exception("Địa chỉ không được để trống");
         }
         this.user_address = user_address;
     }
 
-    public String getSdt() {
+    public String getUser_phone() {
         return user_phone;
     }
 
-    public void setSdt(String user_phone) throws Exception {
+    public void setUser_phone(String user_phone) throws Exception {
         if(user_phone.length() < 10) {
             throw new Exception("SDT khong hop le");
         }

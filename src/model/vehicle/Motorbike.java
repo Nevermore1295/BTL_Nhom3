@@ -1,10 +1,16 @@
 package model.vehicle;
 
 
+import model.User;
+
 public class Motorbike extends Vehicle {
     private int motorbike_enginesize;
     private String motorbike_color;
     private String motorbike_transmission;
+
+    public Motorbike(int vehicle_id, String vehicle_name, User vehicle_owner) {
+        super(vehicle_id, vehicle_name, vehicle_owner);
+    }
 
     public int getMotorbike_enginesize() {
         return motorbike_enginesize;

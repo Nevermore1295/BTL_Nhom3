@@ -1,9 +1,15 @@
 package model.vehicle;
 
+import model.User;
+
 public class Car extends Vehicle {
     private String car_style;
     private String car_color;
     private String car_transmission;
+
+    public Car(int vehicle_id, String vehicle_name, User vehicle_owner) {
+        super(vehicle_id, vehicle_name, vehicle_owner);
+    }
 
     public String getCar_style() {
         return car_style;

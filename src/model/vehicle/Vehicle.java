@@ -7,6 +7,13 @@ public class Vehicle {
     private String vehicle_name;
     private User vehicle_owner;
 
+
+    public Vehicle(int vehicle_id, String vehicle_name, User vehicle_owner) {
+        this.vehicle_id = vehicle_id;
+        this.vehicle_name = vehicle_name;
+        this.vehicle_owner = vehicle_owner;
+    }
+
     public int getVehicle_id() {
         return vehicle_id;
     }
