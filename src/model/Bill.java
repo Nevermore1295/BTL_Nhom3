@@ -8,6 +8,6 @@ public class Bill {
     private int bill_id;
     private User bill_owner;
     private Vehicle bill_vehicle;
-    private Service bill_service;
+    private RepairService bill_service;
     private Date bill_date_created;
 }

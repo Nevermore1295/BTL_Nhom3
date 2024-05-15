@@ -52,7 +52,7 @@ public class Component implements Serializable {
         }
         this.component_price = component_price;
     }
-    public double tongTien() {
+    public double totalPrice() {
         return component_quantity * component_price;
     }
 

@@ -14,6 +14,10 @@ public class Vehicle {
         this.vehicle_owner = vehicle_owner;
     }
 
+    public Vehicle() {
+
+    }
+
     public int getVehicle_id() {
         return vehicle_id;
     }
