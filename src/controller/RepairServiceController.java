@@ -1,11 +1,27 @@
 package controller;
 
+import model.Database;
+import model.DatabaseImpl;
 import model.RepairService;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 
 public class RepairServiceController {
+    Database database;
+
+    public RepairServiceController() {
+        this.database = new DatabaseImpl();
+    }
+
+    public void writeToFile(ArrayList<RepairService> repairServices, String fileName) {
+        this.database.writeToFile(repairServices, fileName);
+    }
+
+    public ArrayList<RepairService> readDataFromFile(String fileName) {
+        return (ArrayList<RepairService>) this.database.readDataFromFile(fileName);
+    }
+
     public void sortByTotalPrice(ArrayList<RepairService> x) {
         x.sort(new Comparator<RepairService>() {
             @Override

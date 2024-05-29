@@ -81,7 +81,6 @@ public class User implements Serializable {
     public String toString() {
         return "User{" + "user_fullname=" + user_fullname + ", user_address=" + user_address + ", user_phone=" + user_phone + '}';
     }
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
