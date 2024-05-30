@@ -9,14 +9,14 @@ import java.util.Objects;
 public class RepairService implements Serializable {
     private Date repair_service_created_date;
     private String repair_service_id;
-    private Component component;
-    private Vehicle vehicle;
+    private Component repair_component;
+    private Vehicle repair_vehicle;
 
     public RepairService() {
     }
-    public RepairService(Component component, Vehicle vehicle, Date repair_service_created_date, String repair_service_id) {
-        this.component = component;
-        this.vehicle = vehicle;
+    public RepairService(Component repair_component, Vehicle repair_vehicle, Date repair_service_created_date, String repair_service_id) {
+        this.repair_component = repair_component;
+        this.repair_vehicle = repair_vehicle;
         this.repair_service_created_date = repair_service_created_date;
         this.repair_service_id = repair_service_id;
 
@@ -68,21 +68,21 @@ public class RepairService implements Serializable {
         final RepairService other = (RepairService) obj;
         return Objects.equals(this.repair_service_id, other.repair_service_id);
     }
-    public Component getComponent() {
-        return component;
+    public Component getRepair_component() {
+        return repair_component;
     }
-    public void setComponent(Component component) {
-        this.component = component;
-    }
-
-    public Vehicle getVehicle() {
-        return vehicle;
+    public void setRepair_component(Component repair_component) {
+        this.repair_component = repair_component;
     }
 
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
+    public Vehicle getRepair_vehicle() {
+        return repair_vehicle;
+    }
+
+    public void setRepair_vehicle(Vehicle repair_vehicle) {
+        this.repair_vehicle = repair_vehicle;
     }
     public double totalPrice() {
-        return component.totalPrice();
+        return repair_component.totalPrice();
     }
 }

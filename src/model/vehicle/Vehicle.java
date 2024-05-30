@@ -6,6 +6,7 @@ public class Vehicle {
     private int vehicle_id;
     private String vehicle_name;
     private User vehicle_owner;
+    private String vehicle_license_number;
 
 
     public Vehicle(int vehicle_id, String vehicle_name, User vehicle_owner) {
@@ -50,4 +51,11 @@ public class Vehicle {
         this.vehicle_owner = vehicle_owner;
     }
 
+    public String getVehicle_license_number() {
+        return vehicle_license_number;
+    }
+
+    public void setVehicle_license_number(String vehicle_license_number) {
+        this.vehicle_license_number = vehicle_license_number;
+    }
 }

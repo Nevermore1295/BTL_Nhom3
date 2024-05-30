@@ -1,11 +1,13 @@
 package controller;
 
-import model.Database;
-import model.DatabaseImpl;
-import model.Insurance;
-import model.RepairService;
+import database.Database;
+import database.DatabaseImpl;
 
+import model.Bill;
+import model.Insurance;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class InsuranceServiceController {
@@ -15,15 +17,30 @@ public class InsuranceServiceController {
         this.database = new DatabaseImpl();
     }
 
-    public void writeToFile(TreeSet<Insurance> insurances, String fileName) {
+    public void writeSetToFile(Set<Insurance> insurances, String fileName) {
         this.database.writeToFile(insurances, fileName);
     }
 
-    public void writeToFile(ArrayList<Insurance> insurances, String fileName) {
+    public void writeArrayListToFile(List<Insurance> insurances, String fileName) {
         this.database.writeToFile(insurances, fileName);
     }
 
-    public ArrayList<Insurance> readDataFromFile(String fileName) {
+    public List<Insurance> readListFromFile(String fileName) {
         return (ArrayList<Insurance>) this.database.readDataFromFile(fileName);
+    }
+
+    public Set<Insurance> readSetFromFile(String fileName) {
+        return (TreeSet<Insurance>) this.database.readDataFromFile(fileName);
+    }
+
+    public ArrayList<Insurance> sortByTotalPrice(ArrayList<Insurance> bills){ return null;}
+    public ArrayList<Insurance> sortByCreatedDate(TreeSet<Insurance> bills){ return null;}
+    public ArrayList<Insurance> sortByVehicleType(ArrayList<Insurance> bills){ return null;}
+
+    public Insurance searchByInsuranceId(TreeSet<Insurance> insurances, String id){
+        return null;
+    }
+    public TreeSet<Insurance> searchByOwner(TreeSet<Insurance> insurances, String id){
+        return null;
     }
 }

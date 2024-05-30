@@ -41,7 +41,6 @@ public class User implements Serializable {
         }
 
     }
-
     public String getUser_fullname() {
         return user_fullname;
     }

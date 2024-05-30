@@ -1,8 +1,7 @@
 package controller;
 
-import model.Database;
-import model.DatabaseImpl;
-import model.RepairService;
+import database.Database;
+import database.DatabaseImpl;
 import model.Service;
 
 import java.util.ArrayList;

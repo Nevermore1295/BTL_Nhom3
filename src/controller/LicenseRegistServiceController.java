@@ -1,9 +1,9 @@
 package controller;
 
-import model.Database;
-import model.DatabaseImpl;
+import database.Database;
+import database.DatabaseImpl;
+import model.Insurance;
 import model.LicenseRegist;
-import model.RepairService;
 
 import java.util.ArrayList;
 
@@ -22,4 +22,8 @@ public class LicenseRegistServiceController {
     public ArrayList<LicenseRegist> readDataFromFile(String fileName) {
        return (ArrayList<LicenseRegist>) this.database.readDataFromFile(fileName);
     }
+
+    public ArrayList<LicenseRegist> sortByName(ArrayList<LicenseRegist> licenseRegists){ return null;}
+
+    public ArrayList<LicenseRegist> sortByCreatedDate(ArrayList<LicenseRegist> licenseRegists){ return null;}
 }
